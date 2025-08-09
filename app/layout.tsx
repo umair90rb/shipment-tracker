@@ -1,11 +1,13 @@
 import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'TCS Parcel Tracker - Track Your Shipments',
+  title: 'TCS Tracking - Track Your Shipments',
   description: 'Track your TCS parcel online using your tracking number or CN number. Get real-time Pakistan TCS tracking updates for shipments, orders, and driving licenses.',
   keywords: 'TCS tracking, parcel tracker, consignment tracking, TCS courier, shipment status, Pakistan TCS tracking, CN tracking, driving license tracking TCS',
   authors: [{ name: 'TCS Tracker' }],
@@ -13,14 +15,14 @@ export const metadata: Metadata = {
   publisher: 'TCS Tracker',
   robots: 'index, follow',
   openGraph: {
-    title: 'TCS Parcel Tracker - Track Your Shipments',
+    title: 'TCS Tracking - Track Your Shipments',
     description: 'Track your TCS parcel online using your tracking number or CN number. Get real-time Pakistan TCS tracking updates for shipments, orders, and driving licenses.',
     type: 'website',
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'TCS Parcel Tracker - Track Your Shipments',
+    title: 'TCS Tracking - Track Your Shipments',
     description: 'Track your TCS parcel online using your tracking number or CN number. Get real-time Pakistan TCS tracking updates for shipments, orders, and driving licenses.',
   },
 }
@@ -92,8 +94,12 @@ export default function RootLayout({
         />
       </head>
       <body className={inter.className}>
-        <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-          {children}
+        <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex flex-col">
+          <Header />
+          <div className="flex-1">
+            {children}
+          </div>
+          <Footer />
         </div>
       </body>
     </html>

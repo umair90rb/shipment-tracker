@@ -1,4 +1,4 @@
-# TCS Parcel Tracker
+# TCS Tracking
 
 A modern, responsive Next.js application for tracking TCS parcels with real-time updates. Built with performance and SEO in mind.
 

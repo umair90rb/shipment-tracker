@@ -41,7 +41,7 @@ export default function HomePage() {
       {/* Header */}
       <header className="text-center mb-12">
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-          TCS Parcel Tracker
+          TCS Tracking
         </h1>
         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
           Track your TCS shipments with real-time updates. Enter your consignment number below to get detailed tracking information.
@@ -73,11 +73,6 @@ export default function HomePage() {
 
       {/* Article Content - Always visible for SEO */}
       <ArticleContent />
-
-      {/* Footer */}
-      <footer className="mt-16 text-center text-gray-500">
-        <p>&copy; 2024 TCS Parcel Tracker. All rights reserved.</p>
-      </footer>
     </main>
   )
 } 
