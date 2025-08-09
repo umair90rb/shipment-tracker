@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import TrackingForm from '@/components/TrackingForm'
 import TrackingResults from '@/components/TrackingResults'
+import ArticleContent from '@/components/ArticleContent'
 import { TrackingData } from '@/types/tracking'
 
 export default function HomePage() {
@@ -69,6 +70,9 @@ export default function HomePage() {
       {trackingData && !isLoading && (
         <TrackingResults data={trackingData} />
       )}
+
+      {/* Article Content - Always visible for SEO */}
+      <ArticleContent />
 
       {/* Footer */}
       <footer className="mt-16 text-center text-gray-500">
