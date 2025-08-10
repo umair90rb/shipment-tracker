@@ -9,21 +9,18 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'TCS Tracking - Track Your Shipments',
   description: 'Track your TCS parcel online using your tracking number or CN number. Get real-time Pakistan TCS tracking updates for shipments, orders, and driving licenses.',
-  keywords: 'TCS tracking, parcel tracker, consignment tracking, TCS courier, shipment status, Pakistan TCS tracking, CN tracking, driving license tracking TCS',
-  authors: [{ name: 'TCS Tracker' }],
-  creator: 'TCS Tracker',
-  publisher: 'TCS Tracker',
-  robots: 'index, follow',
+  keywords: 'TCS tracking, parcel tracking, consignment tracking, TCS courier, shipment status, Pakistan TCS tracking, CN tracking, driving license tracking TCS',
+  authors: [{ name: 'TCS Tracking' }],
+  creator: 'TCS Tracking',
+  publisher: 'TCS Tracking',
+  icons: {
+    icon: '/icon.png'
+  },
   openGraph: {
     title: 'TCS Tracking - Track Your Shipments',
     description: 'Track your TCS parcel online using your tracking number or CN number. Get real-time Pakistan TCS tracking updates for shipments, orders, and driving licenses.',
     type: 'website',
     locale: 'en_US',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'TCS Tracking - Track Your Shipments',
-    description: 'Track your TCS parcel online using your tracking number or CN number. Get real-time Pakistan TCS tracking updates for shipments, orders, and driving licenses.',
   },
 }
 
