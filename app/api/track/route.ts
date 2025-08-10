@@ -12,9 +12,10 @@ export async function GET(request: NextRequest) {
 
     // Your allowed site URL
     const allowedDomain = process.env.NODE_ENV === 'production' ? 'https://tcstracking.xyz' : 'http://localhost:3000' ;
+    const allowedDomainWithWWW = process.env.NODE_ENV === 'production' ? 'https://www.tcstracking.xyz' : 'http://www.localhost:3000' ;
 
     // Check if request comes from your website
-    if (!referer.startsWith(allowedDomain)) {
+    if (!referer.startsWith(allowedDomain) || !referer.startsWith(allowedDomainWithWWW)) {
       return NextResponse.json(
         { error: 'Forbidden - invalid origin' },
         { status: 403 }
