@@ -15,21 +15,23 @@ export async function GET() {
     // Set the secret in a secure, httpOnly cookie
     const response = NextResponse.json({ token })
     
-    response.cookies.set('csrf-secret', secret, {
-      httpOnly: true,
-      secure: process.env.NODE_ENV === 'production',
-      sameSite: 'strict',
-      maxAge: 60 * 60 * 1, // 24 hours
-      path: '/'
-    })
+    // response.cookies.set('csrf-secret', secret, {
+    //   httpOnly: true,
+    //   secure: process.env.NODE_ENV === 'production',
+    //   sameSite: 'strict',
+    //   maxAge: 60 * 60 * 1, // 24 hours
+    //   path: '/'
+    // })
+    // response.cookies.set('session-id', crypto.randomUUID(), {
+    //   httpOnly: true,
+    //   secure: process.env.NODE_ENV === 'production',
+    //   sameSite: 'strict',
+    //   maxAge: 60 * 60 * 1, // 1 hour
+    //   path: '/',
+    // });
 
-    response.cookies.set('session-id', crypto.randomUUID(), {
-      httpOnly: true,
-      secure: process.env.NODE_ENV === 'production',
-      sameSite: 'strict',
-      maxAge: 60 * 60 * 1, // 1 hour
-      path: '/',
-    });
+    response.headers.set('Set-Cookie', `csrf-secret=${secret}; Path=/; Max-Age=3600; Secure; HttpOnly; SameSite=strict, session-id=${crypto.randomUUID()}; Path=/; Max-Age=3600; Secure; HttpOnly; SameSite=strict`)
+
     
     return response
   } catch (error) {
