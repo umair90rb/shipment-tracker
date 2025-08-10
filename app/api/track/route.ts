@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 import { NextRequest, NextResponse } from 'next/server'
 import Tokens from 'csrf'
 
@@ -5,9 +7,6 @@ const tokens = new Tokens()
 
 export async function GET(request: NextRequest) {
   try {
-
-    console.log('request', request.headers)
-
     // Get Origin or Referer
     const referer = request.headers.get('referer') || '';
 
