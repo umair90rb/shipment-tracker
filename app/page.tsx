@@ -5,6 +5,7 @@ import TrackingForm from '@/components/TrackingForm'
 import TrackingResults from '@/components/TrackingResults'
 import ArticleContent from '@/components/ArticleContent'
 import { TrackingData } from '@/types/tracking'
+import { makeAuthenticatedRequest } from '@/lib/csrf'
 
 export default function HomePage() {
   const [trackingData, setTrackingData] = useState<TrackingData | null>(null)
@@ -16,7 +17,7 @@ export default function HomePage() {
     setError(null)
     
     try {
-      const response = await fetch(`/api/track?consignee=${consignmentNumber}`)
+      const response = await makeAuthenticatedRequest(`/api/track?consignee=${consignmentNumber}`)
       
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`)
@@ -61,7 +62,7 @@ export default function HomePage() {
       {/* Loading State */}
       {isLoading && (
         <div className="mt-8 text-center">
-          <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+          <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-red-600"></div>
           <p className="mt-4 text-gray-600">Fetching tracking information...</p>
         </div>
       )}

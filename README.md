@@ -70,17 +70,22 @@ npm start
 ```
 ├── app/
 │   ├── api/
+│   │   ├── csrf/
+│   │   │   └── route.ts      # CSRF token generation endpoint
 │   │   └── track/
-│   │       └── route.ts      # Secure API endpoint
+│   │       └── route.ts      # Secure API endpoint with CSRF protection
 │   ├── layout.tsx            # Root layout with SEO metadata
 │   ├── page.tsx              # Main tracking page
 │   └── globals.css           # Global styles with Tailwind
 ├── components/
 │   ├── TrackingForm.tsx      # Tracking input form
 │   └── TrackingResults.tsx   # Results display component
+├── lib/
+│   └── csrf.ts              # CSRF utility functions
 ├── types/
 │   └── tracking.ts           # TypeScript interfaces
 ├── public/                   # Static assets
+├── middleware.ts             # Security headers middleware
 ├── tailwind.config.js        # Tailwind configuration
 ├── next.config.js            # Next.js configuration
 └── package.json              # Dependencies and scripts
@@ -101,6 +106,15 @@ The app uses a secure server-side API route:
 - **Environment variables**: Secure storage of API credentials
 - **Input validation**: Proper validation of user inputs
 - **Error handling**: Secure error messages without information leakage
+- **CSRF Protection**: Comprehensive cross-site request forgery protection
+  - Cryptographically secure token generation
+  - HTTP-only cookie storage for secrets
+  - Automatic token validation on all API requests
+  - Protection against unauthorized cross-origin requests
+- **Security Headers**: Additional security headers via middleware
+  - X-Content-Type-Options, X-Frame-Options, X-XSS-Protection
+  - Content Security Policy (CSP)
+  - Referrer Policy controls
 
 ## SEO Features
 

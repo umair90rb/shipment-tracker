@@ -72,7 +72,7 @@ export default function Footer() {
             <div className="pt-2">
               <Link 
                 href="/contact" 
-                className="inline-block px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors"
+                className="inline-block px-4 py-2 bg-red-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors"
               >
                 Get Support
               </Link>
