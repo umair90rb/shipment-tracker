@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server'
 import Tokens from 'csrf'
+import crypto from 'crypto';
 
 const tokens = new Tokens()
 
