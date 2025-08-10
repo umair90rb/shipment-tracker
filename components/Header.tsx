@@ -9,7 +9,7 @@ export default function Header() {
           {/* Logo/Brand */}
           <Link href="/" className="flex items-center space-x-2">
             <div className="w-8 h-8 rounded-lg flex items-center justify-center">
-              <Image alt='tcstracking.xyz logo' src='/tcstracking.xyz.png' width={50} height={50} />
+              <Image alt='tcstracking.xyz logo' src='/icon.png' width={50} height={50} />
             </div>
             <span className="text-xl font-bold text-white">TCS Tracking</span>
           </Link>

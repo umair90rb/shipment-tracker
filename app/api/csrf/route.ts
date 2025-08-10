@@ -18,9 +18,17 @@ export async function GET() {
       httpOnly: true,
       secure: process.env.NODE_ENV === 'production',
       sameSite: 'strict',
-      maxAge: 60 * 60 * 24, // 24 hours
+      maxAge: 60 * 60 * 1, // 24 hours
       path: '/'
     })
+
+    response.cookies.set('session-id', crypto.randomUUID(), {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === 'production',
+      sameSite: 'strict',
+      maxAge: 60 * 60 * 1, // 1 hour
+      path: '/',
+    });
     
     return response
   } catch (error) {
