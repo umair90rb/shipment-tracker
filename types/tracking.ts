@@ -28,9 +28,9 @@ export interface Checkpoint {
 }
 
 export interface TrackingData {
-  shipmentinfo: ShipmentInfo[]
-  deliveryinfo: DeliveryInfo[]
-  checkpoints: Checkpoint[]
+  shipmentinfo: ShipmentInfo[] | null
+  deliveryinfo: DeliveryInfo[] | null
+  checkpoints: Checkpoint[] | null
   shipmentsummary: string
   message: string
   traceid: string
