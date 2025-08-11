@@ -6,7 +6,7 @@
   html {
     scroll-behavior: smooth;
   }
-  
+
   body {
     font-feature-settings: 'rlig' 1, 'calt' 1;
   }
@@ -16,28 +16,37 @@
   .tracking-input {
     @apply w-full px-6 py-4 text-lg border-2 border-gray-300 rounded-xl focus:border-blue-500 focus:ring-4 focus:ring-blue-200 transition-all duration-200 placeholder-gray-400;
   }
-  
+
   .tracking-button {
     @apply px-8 py-4 bg-red-600 text-white font-semibold rounded-xl hover:bg-red-700 focus:ring-4 focus:ring-blue-300 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed;
   }
-  
+
   .status-card {
     @apply bg-white rounded-xl shadow-lg p-6 border-l-4 border-blue-500;
   }
-  
+
   .checkpoint-item {
     @apply flex items-start space-x-4 p-4 bg-gray-50 rounded-lg border-l-4 border-green-500;
   }
-  
+
   .checkpoint-item.delivered {
     @apply border-green-500;
   }
-  
+
   .checkpoint-item.in-transit {
     @apply border-blue-500;
   }
-  
+
   .checkpoint-item.pending {
     @apply border-yellow-500;
   }
-} 
+}
+
+
+
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}

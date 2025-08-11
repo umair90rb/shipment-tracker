@@ -1,9 +1,7 @@
 export const dynamic = 'force-dynamic';
 
 import { NextRequest, NextResponse } from 'next/server';
-import Tokens from 'csrf';
 
-const tokens = new Tokens();
 
 export async function GET(request: NextRequest) {
   try {
@@ -28,33 +26,6 @@ export async function GET(request: NextRequest) {
     ) {
       return NextResponse.json(
         { error: 'Forbidden - invalid origin' },
-        { status: 403 }
-      );
-    }
-
-    // Check SameSite cookie (browser must have visited your frontend first)
-    // const sessionCookie = request.cookies.get('session-id')?.value;
-    // if (!sessionCookie) {
-    //   return NextResponse.json(
-    //     { error: 'Forbidden - missing session cookie' },
-    //     { status: 403 }
-    //   );
-    // }
-
-    // Validate CSRF token
-    const csrfToken = request.headers.get('x-csrf-token');
-    const csrfSecret = request.cookies.get('csrf-secret')?.value;
-
-    if (!csrfToken || !csrfSecret) {
-      return NextResponse.json(
-        { error: 'CSRF token missing' },
-        { status: 403 }
-      );
-    }
-
-    if (!tokens.verify(csrfSecret, csrfToken)) {
-      return NextResponse.json(
-        { error: 'Invalid CSRF token' },
         { status: 403 }
       );
     }

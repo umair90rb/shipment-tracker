@@ -23,10 +23,10 @@ export default function Header() {
               Home
             </Link>
             <Link 
-              href="/about" 
+              href="/tcs-branches" 
               className="text-white hover:text-yellow-400 transition-colors font-medium"
             >
-              About
+              TCS Branches
             </Link>
             <Link 
               href="/contact" 
@@ -39,12 +39,6 @@ export default function Header() {
               className="text-white hover:text-yellow-400 transition-colors font-medium"
             >
               Privacy
-            </Link>
-            <Link 
-              href="/terms-and-conditions" 
-              className="text-white hover:text-yellow-400 transition-colors font-medium"
-            >
-              Terms
             </Link>
           </nav>
           

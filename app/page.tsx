@@ -5,7 +5,6 @@ import TrackingForm from '@/components/TrackingForm'
 import TrackingResults from '@/components/TrackingResults'
 import ArticleContent from '@/components/ArticleContent'
 import { TrackingData } from '@/types/tracking'
-import { makeAuthenticatedRequest } from '@/lib/csrf'
 
 export default function HomePage() {
   const [trackingData, setTrackingData] = useState<TrackingData | null>(null)
@@ -17,7 +16,7 @@ export default function HomePage() {
     setError(null)
     
     try {
-      const response = await makeAuthenticatedRequest(`/api/track?consignee=${consignmentNumber}`)
+      const response = await fetch(`/api/track?consignee=${consignmentNumber}`)
       
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`)
