@@ -1,7 +1,7 @@
 import Card from "@/components/Card"
 import Tracking from "@/components/Tracking"
-import { Metadata } from "next"
 import classes from "@/constants/classes"
+import { Metadata } from "next"
 
 
 export const metadata: Metadata = {
