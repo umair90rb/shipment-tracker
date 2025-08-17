@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy - TCS Tracking',
+  title: 'Privacy Policy - tcstracking.xyz',
   description: 'Read our privacy policy to understand how TCS Tracking collects, uses, and protects your personal information.',
   keywords: 'privacy policy, TCS tracker privacy, data protection, personal information security',
 }

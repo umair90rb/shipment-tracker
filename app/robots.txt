@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://tcstracking.xyz/sitemap.xml
+Sitemap: https://www.tcstracking.xyz/sitemap.xml

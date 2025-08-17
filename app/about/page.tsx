@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'About Us - TCS Tracking',
+  title: 'About Us - tcstracking.xyz',
   description: 'Learn about TCS Tracking, Pakistan\'s trusted courier tracking service. Discover our mission to provide reliable parcel tracking solutions.',
   keywords: 'about TCS tracker, TCS tracking service, Pakistan courier tracking, parcel tracking company',
 }

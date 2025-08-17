@@ -23,10 +23,22 @@ export default function Header() {
               Home
             </Link>
             <Link 
+              href="/tcs-tracking" 
+              className="text-white hover:text-yellow-400 transition-colors font-medium"
+            >
+              TCS Tracking
+            </Link>
+            <Link 
               href="/tcs-branches" 
               className="text-white hover:text-yellow-400 transition-colors font-medium"
             >
               TCS Branches
+            </Link>
+            <Link 
+              href="/tcs-helpline-numbers" 
+              className="text-white hover:text-yellow-400 transition-colors font-medium"
+            >
+              TCS Helpline Number
             </Link>
             <Link 
               href="/contact" 

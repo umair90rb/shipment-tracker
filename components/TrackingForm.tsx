@@ -25,7 +25,7 @@ export default function TrackingForm({ onSubmit, isLoading }: TrackingFormProps)
             Enter Consignment Number (CN)
           </label>
           <input
-            type="text"
+            type="number"
             id="consignment"
             value={consignmentNumber}
             onChange={(e) => setConsignmentNumber(e.target.value)}

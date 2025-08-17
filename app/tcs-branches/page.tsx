@@ -1,17 +1,14 @@
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+    title: 'TCS branches - tcstracking.xyz',
+    description: 'TCS branches list with phone number and address. You can search with city name using ctrl + f',
+    keywords: 'tcs branches, tcs branches list, tcs branches with contact numbers, tcs branches with address',
+}
+
 export default function TCSBranchesPage() {
     return <main className="container mx-auto px-4 py-8 max-w-4xl">
-        {/* Back to Home Link */}
-        <div className="mb-6">
-            <a
-                href="/"
-                className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors"
-            >
-                <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                </svg>
-                Back to Home
-            </a>
-        </div>
+       
 
         {/* Header */}
         <header className="text-center mb-12">
